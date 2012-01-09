@@ -44,11 +44,12 @@
 		<table>
 			<thead>
 			<tr>
-				<g:sortableColumn property="name"
+				<g:sortableColumn property="name" class="euphorigenic"
 								  title="${message(code:'songRequest.name.label', default: 'Your Name')}"/>
-				<g:sortableColumn property="artist"
+				<g:sortableColumn property="artist" class="euphorigenic"
 								  title="${message(code:'songRequest.artist.label', default: 'Artist')}"/>
-				<g:sortableColumn property="song" title="${message(code:'songRequest.song.label', default: 'Song')}"/>
+				<g:sortableColumn property="song" class="euphorigenic"
+								  title="${message(code:'songRequest.song.label', default: 'Song')}"/>
 			</tr>
 			</thead>
 			<tbody>

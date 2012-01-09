@@ -13,7 +13,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: madLibZombieInstance, field: 'nameSomeone', 'error')} ">
 	<label for="nameSomeone">
-		<g:message code="madLibZombie.nameSomeone.label" default="Name of Someone You Know (not K or S)"/>
+		<g:message code="madLibZombie.nameSomeone.label" default="Name of Someone You Know (not Steve or Katie)"/>
 
 	</label>
 	<g:textField name="nameSomeone" value="${madLibZombieInstance?.nameSomeone}"/>

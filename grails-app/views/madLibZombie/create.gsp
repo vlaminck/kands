@@ -7,7 +7,7 @@
 	<title><g:message code="default.create.label" args="[entityName]"/></title>
 	<style>
 	div.fieldcontain label {
-		width: 35%;
+		width: 38%;
 	}
 
 	input {

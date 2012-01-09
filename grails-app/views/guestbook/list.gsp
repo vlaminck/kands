@@ -23,8 +23,9 @@
 	<table>
 		<thead>
 		<tr>
-			<g:sortableColumn property="name" title="${message(code: 'guestbook.name.label', default: 'Name')}"/>
-			<g:sortableColumn property="comment"
+			<g:sortableColumn property="name" class="euphorigenic"
+							  title="${message(code: 'guestbook.name.label', default: 'Name')}"/>
+			<g:sortableColumn property="comment" class="euphorigenic"
 							  title="${message(code: 'guestbook.comment.label', default: 'Comment')}"/>
 		</tr>
 		</thead>

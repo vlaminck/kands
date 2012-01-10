@@ -25,7 +25,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "create"
+            dbCreate = "update"
 			url = "jdbc:mysql://localhost/kands"
 			driverClassName = "com.mysql.jdbc.Driver"
 			username = "mealplanner"

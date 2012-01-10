@@ -90,7 +90,7 @@
       <file leaf-file-name="DataSource.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="47" selection-start="762" selection-end="762" vertical-scroll-proportion="0.45356372">
+            <state line="27" column="30" selection-start="722" selection-end="722" vertical-scroll-proportion="0.43736503">
               <folding />
             </state>
           </provider>
@@ -574,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="47" selection-start="762" selection-end="762" vertical-scroll-proportion="0.45356372">
+        <state line="27" column="30" selection-start="722" selection-end="722" vertical-scroll-proportion="0.43736503">
           <folding />
         </state>
       </provider>

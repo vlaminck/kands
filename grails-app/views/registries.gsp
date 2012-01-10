@@ -8,7 +8,7 @@
 <body>
 <div class="paragraph">
 	<div class="paragraph">
-		<h1 class="center">Registries</h1>
+		<h1 class="center page-header">Registries</h1>
 	</div>
 	<p>
 		Yeah...haven't done this part yet! We'll get to it soon :)

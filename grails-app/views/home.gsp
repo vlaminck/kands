@@ -15,7 +15,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center euphorigenic">
+	<h1 class="center euphorigenic page-header">
 
 	%{--</h1>--}%
 	%{--<h1 class="not-h1 euphorigenic">--}%

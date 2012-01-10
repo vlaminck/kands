@@ -18,7 +18,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">
+	<h1 class="center page-header">
 		Zombie Mad Lib
 	</h1>
 	%{--<h1 class="not-h1 euphorigenic" style="font-size: 1.4em;">--}%

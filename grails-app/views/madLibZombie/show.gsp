@@ -15,7 +15,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">Steve & Katie Battle the Zombies</h1>
+	<h1 class="center page-header">Steve & Katie Battle the Zombies</h1>
 </div>
 
 %{--<h1 class="center"> </h1>--}%

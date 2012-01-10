@@ -14,7 +14,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">Song Request</h1>
+	<h1 class="center page-header">Song Request</h1>
 </div>
 %{--<a href="#list-songRequest" class="skip" tabindex="-1">--}%
 %{--<g:message code="default.link.skip.label" default="Skip to content&hellip;"/>--}%

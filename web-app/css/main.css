@@ -757,3 +757,8 @@ h1.center {
 	text-align: center;
 	font-size: 1.5em;
 }
+
+.page-header {
+	color: rgb(110, 143, 126);
+	/*(R: 110, G: 143, B: 126)*/
+}

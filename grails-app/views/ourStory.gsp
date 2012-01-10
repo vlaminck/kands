@@ -7,7 +7,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">
+	<h1 class="center page-header">
 		Our Story
 	</h1>
 </div>

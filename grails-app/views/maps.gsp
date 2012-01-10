@@ -36,7 +36,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">Maps & Information</h1>
+	<h1 class="center page-header">Maps & Information</h1>
 </div>
 
 <div class="paragraph">

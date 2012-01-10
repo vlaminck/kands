@@ -13,7 +13,7 @@
 
 <body>
 <div class="paragraph">
-	<h1 class="center">Guestbook</h1>
+	<h1 class="center page-header">Guestbook</h1>
 </div>
 %{--<h1><g:message code="default.list.label" args="[entityName]"/></h1>--}%
 %{--<g:if test="${flash.message}">--}%

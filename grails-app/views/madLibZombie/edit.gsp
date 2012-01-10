@@ -17,6 +17,14 @@
 </head>
 
 <body>
+<div class="paragraph">
+	<h1 class="center page-header">
+		Zombie Mad Lib
+	</h1>
+	%{--<h1 class="not-h1 euphorigenic" style="font-size: 1.4em;">--}%
+		%{--Zombie Mad Lib--}%
+	%{--</h1>--}%
+</div>
 %{--<h1 class="center"> </h1>--}%
 %{--<div class="paragraph"></div>--}%
 %{--<a href="#edit-madLibZombie" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>--}%

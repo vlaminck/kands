@@ -25,8 +25,11 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE"
+            dbCreate = "create"
+			url = "jdbc:mysql://localhost/kands"
+			driverClassName = "com.mysql.jdbc.Driver"
+			username = "mealplanner"
+			password = "k4t13-f4c3"
             pooled = true
             properties {
                maxActive = -1

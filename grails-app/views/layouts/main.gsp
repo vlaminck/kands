@@ -40,7 +40,8 @@
 <div id="wrapper" class="euphorigenic">
 	<div id="grailsLogo" role="banner" style="position: fixed; z-index: 10; background-color: transparent;">
 		%{--<g:img dir="images" file="kandsbanner.png"/>--}%
-		<g:img dir="images" file="kandsbanner-newer.png"/>
+		%{--<g:img dir="images" file="kandsbanner-newer.png"/>--}%
+		<g:img dir="images" file="kandsbanner-even-newer.png"/>
 	</div>
 
 	<div style="height:250px; width:960px; background-color: transparent;"></div>

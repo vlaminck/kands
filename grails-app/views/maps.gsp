@@ -19,7 +19,6 @@
 	}
 
 	span.external-link {
-		margin-left: 5%;
 		font-size: 0.8em;
 	}
 
@@ -29,8 +28,9 @@
 	}
 
 	div.map-container {
-		margin-left: 10%
+		text-align: center;
 	}
+
 	</style>
 </head>
 
@@ -60,11 +60,11 @@
 	<br/>
 
 
-	<div>
+	<div class="map-container">
 		<g:img dir="images" file="sunkenMap2.png" style="width:650px;"/>
-		<span class="external-link" style="margin-left: 15%;">
+		<span class="external-link">
 			<g:link url="http://www.comozooconservatory.org/attractions/gardens/sunken-gardens/#/info"
-					target="_blank">Go Here To Visit the Website</g:link>
+							target="_blank">Go Here To Visit the Website</g:link>
 			––
 			<g:link
 				url="http://g.co/maps/sg4wn"
@@ -79,13 +79,13 @@
 
 	<h1 class="not-h1 euphorigenic">Reception</h1><br/>
 	The reception will be at Pizza Lucé in downtown Minneapolis.
-	Anyone is welcome to leave Como after the ceremony ends start eating and drinking at Pizza Lucé
-	while pictures are being taken. We can't wait to treat everyone to tons of great food, beer, and wine,
+	Anyone is welcome to leave Como after the ceremony ends to start
+	eating and drinking at Pizza Lucé while pictures are being taken.
+	We’d love to treat everyone to tons of great food, beer, and wine,
 	so please eat a late lunch so that you'll still be hungry!
 	Use the private entrance to the 2nd Avenue Room located on 2nd Avenue.
 	Pizza Lucé is located near several surface lots and parking ramps (see maps below).
 	There is also metered on-street parking surrounding it.
-
 	%{--The reception will be at Pizza Luce in downtown Minneapolis.--}%
 	%{--It starts whenever the ceremony ends! We can't wait to treat everyone to tons of great food, beer, and wine,--}%
 	%{--so please eat a late lunch so that you'll still be hungry!--}%
@@ -95,11 +95,29 @@
 	<br/>
 	<br/>
 
-	<div style="margin-left: 10%">
+	<span class="external-link"
+				style="position:absolute; width:100%; text-align: center; font-size:1em;">
+		<g:link
+			url="http://maps.google.com/maps/ms?msid=215605481229555627214.0004b60ebbc35c9540501&msa=0" target="_blank"
+			class="external-link" style="width:100%; text-align: center;">
+			Directions from Como to Lucé
+		</g:link>
+	</span>
+	<br/>
+	<br/>
+
+	<div class="map-container">
+		%{--<span class="external-link">--}%
+		%{--<g:link--}%
+		%{--url="http://maps.google.com/maps/ms?msid=215605481229555627214.0004b60ebbc35c9540501&msa=0" target="_blank"--}%
+		%{--class="external-link">--}%
+		%{--Directions from Como to Lucé--}%
+		%{--</g:link>--}%
+		%{--</span>--}%
 		<img src="${g.createLink(url: "http://2ndave.pizzaluce.com/assets/img/map-suburbs.gif")}" alt="blank"
-			 style="background-color: black; width:500px;">
+				 style="background-color: black; width:500px;">
 		<img src="${g.createLink(url: "http://2ndave.pizzaluce.com/assets/img/map-downtown.gif")}" alt="blank"
-			 style="background-color: black; width: 500px;">
+				 style="background-color: black; width: 500px;">
 		<br/>
 		<span class="external-link">
 			<g:link
@@ -130,19 +148,22 @@
 	%{--If you have any questions whatsoever about where to stay, please contact us or leave a comment on--}%
 	%{--this site and we'll figure it out with you.--}%
 	<br/>
-	<span class="external-link" style="margin-left: 14%;">
-		<g:link
-			url="http://www.thehotelminneapolis.com/" target="_blank"
-			class="external-link">
-			Go Here To Visit the Website
-		</g:link>
-		––
-		<g:link
-			url="http://g.co/maps/ytjc3"
-			class="external-link" target="_blank">
-			Get Directions From Google
-		</g:link>
-	</span>
+
+	<div class="map-container">
+		<span class="external-link">
+			<g:link
+				url="http://www.thehotelminneapolis.com/" target="_blank"
+				class="external-link">
+				Go Here To Visit the Website
+			</g:link>
+			––
+			<g:link
+				url="http://g.co/maps/ytjc3"
+				class="external-link" target="_blank">
+				Get Directions From Google
+			</g:link>
+		</span>
+	</div>
 
 	%{--<br/>--}%
 	%{--<br/>--}%

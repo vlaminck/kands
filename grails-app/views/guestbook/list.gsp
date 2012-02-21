@@ -8,6 +8,13 @@
 	input {
 		width: 90%;
 	}
+
+	.odd input[type='submit'] {
+		background-color: #F7F7F7;
+	}
+	.even input[type='submit'] {
+		background-color: #ffffff;
+	}
 	</style>
 </head>
 
@@ -24,9 +31,9 @@
 		<thead>
 		<tr>
 			<g:sortableColumn property="name" class="euphorigenic"
-							  title="${message(code: 'guestbook.name.label', default: 'Name')}"/>
+												title="${message(code: 'guestbook.name.label', default: 'Name')}"/>
 			<g:sortableColumn property="comment" class="euphorigenic"
-							  title="${message(code: 'guestbook.comment.label', default: 'Comment')}"/>
+												title="${message(code: 'guestbook.comment.label', default: 'Comment')}"/>
 		</tr>
 		</thead>
 		<tbody>
@@ -40,22 +47,23 @@
 				</td>
 			</tr>
 		</g:each>
-		<tr>
+		<tr class="${(guestbookInstanceList.size() % 2) == 0 ? 'even' : 'odd'}">
 			<td>
 				<g:textField name="name" value="${guestbookInstance?.name}" placeholder="Your Name"/>
 			</td>
 			<td>
 				<g:textArea name="comment" cols="40" rows="5" maxlength="2000" value="${guestbookInstance?.comment}"
-							placeholder="Comment"/>
+										placeholder="Comment"/>
 			</td>
 		</tr>
-		<tr class="noHoverChange">
+		<tr class="noHoverChange ${(guestbookInstanceList.size() % 2) == 0 ? 'odd' : 'even'}">
 			%{--<td>--}%
 			%{--<g:textField name="name" value="${guestbookInstance?.name}"/>--}%
 			%{--</td>--}%
-			<td colspan="2"">
-		<g:submitButton name="create" class="zombieInput euphorigenic multi-col" value="Post Comment"/>
-		</td>
+			<td colspan="2">
+				<g:submitButton name="create" class="zombieInput euphorigenic multi-col"
+												value="Post Comment"/>
+			</td>
 		</tr>
 		</tbody>
 	</table>

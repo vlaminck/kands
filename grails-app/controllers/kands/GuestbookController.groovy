@@ -2,35 +2,29 @@ package kands
 
 import org.springframework.dao.DataIntegrityViolationException
 
-class GuestbookController
-{
+class GuestbookController {
 
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-	def index()
-	{
+	def index() {
 		redirect(action: "list", params: params)
 	}
 
-	def list()
-	{
+	def list() {
 //		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		[
-			guestbookInstanceList: Guestbook.list(),
+			guestbookInstanceList: Guestbook.list([sort: 'dateCreated', order: 'asc']),
 			guestbookInstanceTotal: Guestbook.count()
 		]
 	}
 
-	def create()
-	{
+	def create() {
 		[guestbookInstance: new Guestbook(params)]
 	}
 
-	def save()
-	{
+	def save() {
 		def guestbookInstance = new Guestbook(params)
-		if (!guestbookInstance.save(flush: true))
-		{
+		if (!guestbookInstance.save(flush: true)) {
 			render(view: "create", model: [guestbookInstance: guestbookInstance])
 			return
 		}
@@ -39,11 +33,9 @@ class GuestbookController
 		redirect(action: "list")
 	}
 
-	def show()
-	{
+	def show() {
 		def guestbookInstance = Guestbook.get(params.id)
-		if (!guestbookInstance)
-		{
+		if (!guestbookInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "list")
 			return
@@ -54,11 +46,9 @@ class GuestbookController
 		]
 	}
 
-	def edit()
-	{
+	def edit() {
 		def guestbookInstance = Guestbook.get(params.id)
-		if (!guestbookInstance)
-		{
+		if (!guestbookInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "list")
 			return
@@ -69,21 +59,17 @@ class GuestbookController
 		]
 	}
 
-	def update()
-	{
+	def update() {
 		def guestbookInstance = Guestbook.get(params.id)
-		if (!guestbookInstance)
-		{
+		if (!guestbookInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "list")
 			return
 		}
 
-		if (params.version)
-		{
+		if (params.version) {
 			def version = params.version.toLong()
-			if (guestbookInstance.version > version)
-			{
+			if (guestbookInstance.version > version) {
 				guestbookInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
 					[message(code: 'guestbook.label', default: 'Guestbook')] as Object[],
 					"Another user has updated this Guestbook while you were editing")
@@ -94,8 +80,7 @@ class GuestbookController
 
 		guestbookInstance.properties = params
 
-		if (!guestbookInstance.save(flush: true))
-		{
+		if (!guestbookInstance.save(flush: true)) {
 			render(view: "edit", model: [guestbookInstance: guestbookInstance])
 			return
 		}
@@ -104,24 +89,20 @@ class GuestbookController
 		redirect(action: "show", id: guestbookInstance.id)
 	}
 
-	def delete()
-	{
+	def delete() {
 		def guestbookInstance = Guestbook.get(params.id)
-		if (!guestbookInstance)
-		{
+		if (!guestbookInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "list")
 			return
 		}
 
-		try
-		{
+		try {
 			guestbookInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "list")
 		}
-		catch (DataIntegrityViolationException e)
-		{
+		catch (DataIntegrityViolationException e) {
 			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'guestbook.label', default: 'Guestbook'), params.id])
 			redirect(action: "show", id: params.id)
 		}

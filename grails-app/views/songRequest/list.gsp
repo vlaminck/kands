@@ -9,12 +9,23 @@
 	input {
 		width: 90%;
 	}
+
+	.odd input[type='submit'] {
+		background-color: #F7F7F7;
+	}
+
+	.even input[type='submit'] {
+		background-color: #ffffff;
+	}
+
 	</style>
 </head>
 
 <body>
 <div class="paragraph">
 	<h1 class="center page-header">Song Request</h1>
+	<br/>
+	Have a favorite song you love to dance to? Request it!&nbsp;&nbsp;Please remember that we have veto power and are not afraid to use it :)
 </div>
 %{--<a href="#list-songRequest" class="skip" tabindex="-1">--}%
 %{--<g:message code="default.link.skip.label" default="Skip to content&hellip;"/>--}%
@@ -45,11 +56,11 @@
 			<thead>
 			<tr>
 				<g:sortableColumn property="name" class="euphorigenic"
-								  title="${message(code:'songRequest.name.label', default: 'Your Name')}"/>
+													title="${message(code:'songRequest.name.label', default: 'Your Name')}"/>
 				<g:sortableColumn property="artist" class="euphorigenic"
-								  title="${message(code:'songRequest.artist.label', default: 'Artist')}"/>
+													title="${message(code:'songRequest.artist.label', default: 'Artist')}"/>
 				<g:sortableColumn property="song" class="euphorigenic"
-								  title="${message(code:'songRequest.song.label', default: 'Song')}"/>
+													title="${message(code:'songRequest.song.label', default: 'Song')}"/>
 			</tr>
 			</thead>
 			<tbody>
@@ -66,7 +77,7 @@
 					</td>
 				</tr>
 			</g:each>
-			<tr>
+			<tr class="${(songRequestInstanceList.size() % 2) == 0 ? 'even' : 'odd'}">
 				<td>
 					<g:textField name="name" value="${songRequestInstance?.name}" placeholder="Your Name"/>
 				</td>
@@ -77,13 +88,14 @@
 					<g:textField name="song" value="${songRequestInstance?.song}" placeholder="Song"/>
 				</td>
 			</tr>
-			<tr class="noHoverChange">
+			<tr class="noHoverChange ${(songRequestInstanceList.size() % 2) == 0 ? 'odd' : 'even'}">
 				%{--<td>--}%
 				%{--</td>--}%
 				%{--<td>--}%
 				%{--</td>--}%
 				<td colspan="3">
-					<g:submitButton name="create" class="zombieInput euphorigenic multi-col" value="Save Request"/>
+					<g:submitButton name="create" class="zombieInput euphorigenic multi-col"
+													value="Save Request"/>
 				</td>
 			</tr>
 			</tbody>

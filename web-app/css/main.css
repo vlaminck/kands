@@ -18,6 +18,7 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	overflow-y: scroll;
 }
 
 html.no-cssgradients {
@@ -171,7 +172,8 @@ img {
 }
 
 .nav a {
-	color: #666666;
+	/*color: #666666;*/
+	color: rgb(110, 143, 126);
 	display: block;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
@@ -181,12 +183,14 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	/*color: #666666;*/
+	color: rgb(110, 143, 126);
 }
 
 .nav a:focus, .nav a:hover {
 	/*background-color: #999999;*/
-	color: #000000;
+	/*color: #000000;*/
+	color: #666666;
 	outline: none;
 	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);*/
 	cursor: pointer;
@@ -618,7 +622,7 @@ a.noStyle {
 }
 
 a span {
-	font-size: 1.1em;
+	font-size: 1em;
 	color: gray;
 }
 
@@ -760,5 +764,5 @@ h1.center {
 
 .page-header {
 	color: rgb(110, 143, 126);
-	/*(R: 110, G: 143, B: 126)*/
+	(R: 110, G: 143, B: 126)
 }

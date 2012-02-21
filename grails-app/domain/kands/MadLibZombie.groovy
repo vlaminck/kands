@@ -26,6 +26,9 @@ class MadLibZombie
 
 	MadLibZombie editedFrom
 
+	Date dateCreated
+	Date lastUpdated
+
 	static constraints = {
 		editedFrom(nullable: true)
 	}

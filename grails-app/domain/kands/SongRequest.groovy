@@ -6,6 +6,9 @@ class SongRequest
 	String artist
 	String song
 
+	Date dateCreated
+	Date lastUpdated
+
 	static constraints = {
 	}
 }

@@ -7,11 +7,11 @@
 	<title><g:message code="default.edit.label" args="[entityName]"/></title>
 	<style>
 	div.fieldcontain label {
-		width: 35%;
+		width: 30%;
 	}
 
 	input {
-		width: 24%;
+		width: 34%;
 	}
 	</style>
 </head>
